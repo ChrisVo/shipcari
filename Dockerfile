@@ -1,7 +1,8 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 LABEL maintainer="chrisanhvo@gmail.com"
 
 RUN apt-get update -y && \
+    apt-get upgrade -y && \
     apt-get install -y python3-pip python3-dev poppler-utils
 
 COPY ./requirements.txt /app/requirements.txt
