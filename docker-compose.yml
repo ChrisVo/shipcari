@@ -2,5 +2,6 @@ version: "3"
 services:
     webapp:
         build: .
+        image: shipcari
         ports:
-            - "8000:8000"
+            - 8000:80
