@@ -7,10 +7,12 @@ from flask import send_file
 import logging
 import requests
 from pdf_crop.pdf_to_jpg import convert_to_jpg, crop_image
-
+from prometheus_flask_exporter import PrometheusMetrics
 
 app = Flask(__name__)
+metrics = PrometheusMetrics(app)
 
+metrics.info('app_info', 'Shipcari', version='1.0.0')
 
 @app.route("/")
 def main():
