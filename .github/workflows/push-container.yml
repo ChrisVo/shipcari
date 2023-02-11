@@ -31,4 +31,3 @@ jobs:
         context: .
         push: true
         tags: ghcr.io/${{ vars.GITHUB_REPOSITORY }}/shipcari:latest
-    
