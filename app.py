@@ -18,6 +18,9 @@ metrics.info('app_info', 'Shipcari', version='1.0.0')
 def main():
     return render_template("index.html")
 
+@app.route("/health")
+def health():
+    return "OK"
 
 @app.route("/crop_pdf", methods=["POST"])
 def handle():
